@@ -36,4 +36,9 @@ public class UserController {
 		// This returns a JSON or XML with the users
 		return userRepository.findAll();
 	}
+
+	@GetMapping(path = "/user")
+	public @ResponseBody String getUser(@RequestParam String email){
+		return userRepository.findByEmail(email).getEmail();
+	}
 }

@@ -9,5 +9,5 @@ import org.springframework.stereotype.Repository;
 // CRUD refers Create, Read, Update, Delete
 @Repository
 public interface UserRepository extends CrudRepository<User, Long> {
-
+    User findByEmail(String username);
 }
