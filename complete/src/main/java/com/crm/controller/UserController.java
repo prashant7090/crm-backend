@@ -37,8 +37,5 @@ public class UserController {
 		return userRepository.findAll();
 	}
 
-	@GetMapping(path = "/user")
-	public @ResponseBody String getUser(@RequestParam String email){
-		return userRepository.findByEmail(email).getEmail();
-	}
+
 }
